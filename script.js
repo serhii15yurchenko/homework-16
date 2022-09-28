@@ -42,13 +42,14 @@ console.log(number1(3,5));
 // Напиши функцію, яка обчислює факторіал переданого їй числа.
 
 let factorial = function(number2) {
+    let result = 1;
     for (i = 1; i <= number2; i++) {
-        result = i * number2;
-        console.log(result)
+        result = result * i;
+        console.log(result);
     }
     return result;
 }
-console.log(factorial(5));
+console.log(factorial(7));
 
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх 
 // в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
@@ -113,14 +114,15 @@ let range = function (min,max) {
     for (let k = min; k <= max; k++) {
         let result = 0;
         for (let i = 1; i < k; i++) {
-            if (k % i === 0) {
+            if (k % i == 0) {
                 result = result + i;
             }
         }
-        if (result === k) {
+        if (result == k) {
            console.log(k);
         }
         
     }
+    
 }
-console.log(range(1, 1000));
+range(1, 10000);
